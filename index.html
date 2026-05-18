@@ -30,10 +30,26 @@ body {
   padding: 20px;
 }
 
+  .hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url("download.jpg") center/cover no-repeat;
+  opacity: 0.12;
+  z-index: 0;
+}
+
 .hero h1 {
   font-size: 3.2rem;
   color: #b8892e; /* rich gold */
   letter-spacing: 1px;
+}
+
+  .hero h1,
+.hero p,
+.hero .btn {
+  position: relative;
+  z-index: 1;
 }
 
 /* BIO */

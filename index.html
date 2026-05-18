@@ -14,8 +14,8 @@
 }
 
 body {
-  background: radial-gradient(circle at top, #1b1b3a 0%, #0b1020 45%, #070a14 100%);
-  color: #f8fafc;
+  background: #fffaf3; /* warm cream */
+  color: #2b2b2b;
   line-height: 1.6;
 }
 
@@ -32,34 +32,35 @@ body {
 
 .hero h1 {
   font-size: 3.2rem;
-  background: linear-gradient(90deg, #7c3aed, #22d3ee, #f97316);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: #b8892e; /* rich gold */
+  letter-spacing: 1px;
 }
 
-.hero p {
-  max-width: 600px;
-  margin-top: 10px;
-  color: #cbd5e1;
+/* BIO */
+.bio {
+  max-width: 650px;
+  margin-top: 15px;
+  color: #4a4a4a;
+  font-size: 1.05rem;
 }
 
 /* BUTTON */
 .btn {
-  margin-top: 20px;
-  padding: 12px 22px;
+  margin-top: 25px;
+  padding: 12px 24px;
   border: none;
-  background: linear-gradient(90deg, #7c3aed, #22d3ee);
-  color: white;
+  background: linear-gradient(90deg, #d4af37, #f1e0a6);
+  color: #2b2b2b;
   font-weight: bold;
   cursor: pointer;
   border-radius: 8px;
-  box-shadow: 0 8px 20px rgba(124, 58, 237, 0.35);
+  box-shadow: 0 8px 18px rgba(212, 175, 55, 0.25);
   transition: 0.3s;
 }
 
 .btn:hover {
   transform: translateY(-2px);
-  box-shadow: 0 12px 30px rgba(34, 211, 238, 0.35);
+  box-shadow: 0 12px 25px rgba(212, 175, 55, 0.35);
 }
 
 /* SECTIONS */
@@ -72,7 +73,8 @@ section {
 h2 {
   text-align: center;
   margin-bottom: 20px;
-  color: #e2e8f0;
+  color: #b8892e;
+  font-size: 1.8rem;
 }
 
 /* GRID */
@@ -84,42 +86,47 @@ h2 {
 
 /* CARDS */
 .card {
-  background: linear-gradient(145deg, #141a2e, #0f172a);
+  background: #ffffff;
   padding: 20px;
   border-radius: 12px;
-  border: 1px solid rgba(255,255,255,0.06);
+  border: 1px solid #f0e6d2;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.05);
   transition: 0.3s;
+  text-align: center;
 }
 
 .card:hover {
   transform: translateY(-4px);
-  border-color: rgba(34, 211, 238, 0.4);
-  box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+  border-color: #d4af37;
+  box-shadow: 0 10px 25px rgba(212, 175, 55, 0.15);
 }
 
 /* PROJECTS */
 .project {
-  background: linear-gradient(145deg, #141a2e, #0f172a);
+  background: #ffffff;
   padding: 20px;
   border-radius: 12px;
   text-decoration: none;
-  color: white;
-  border: 1px solid rgba(255,255,255,0.06);
+  color: #2b2b2b;
+  border: 1px solid #f0e6d2;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.05);
   transition: 0.3s;
+  display: block;
 }
 
 .project:hover {
   transform: translateY(-6px);
-  border-color: rgba(124, 58, 237, 0.5);
-  box-shadow: 0 12px 30px rgba(124, 58, 237, 0.2);
+  border-color: #d4af37;
+  box-shadow: 0 12px 30px rgba(212, 175, 55, 0.2);
 }
 
 /* CONTACT */
 .contact {
-  background: linear-gradient(145deg, #0f172a, #0b1020);
+  background: #ffffff;
   border-radius: 12px;
   padding: 40px;
-  border: 1px solid rgba(255,255,255,0.06);
+  border: 1px solid #f0e6d2;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.05);
 }
 
 form {
@@ -132,24 +139,25 @@ form {
 
 input, textarea {
   padding: 12px;
-  border: none;
+  border: 1px solid #e6dcc7;
   border-radius: 8px;
   font-size: 1rem;
-  background: #111827;
-  color: white;
-  border: 1px solid rgba(255,255,255,0.08);
+  background: #fffdf8;
+  color: #2b2b2b;
 }
 
 input:focus, textarea:focus {
   outline: none;
-  border-color: #22d3ee;
-  box-shadow: 0 0 0 3px rgba(34, 211, 238, 0.15);
+  border-color: #d4af37;
+  box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.15);
 }
 
+/* SUBMIT BUTTON */
 button[type="submit"] {
   padding: 12px;
   border: none;
-  background: linear-gradient(90deg, #f97316, #facc15);
+  background: linear-gradient(90deg, #b8892e, #d4af37);
+  color: white;
   font-weight: bold;
   cursor: pointer;
   border-radius: 8px;
@@ -158,14 +166,14 @@ button[type="submit"] {
 
 button[type="submit"]:hover {
   transform: translateY(-2px);
-  box-shadow: 0 10px 25px rgba(249, 115, 22, 0.25);
+  box-shadow: 0 10px 25px rgba(184, 137, 46, 0.25);
 }
 
 /* FOOTER */
 footer {
   text-align: center;
   padding: 20px;
-  color: #94a3b8;
+  color: #8a7d66;
 }
 </style>
 </head>
@@ -175,9 +183,10 @@ footer {
 <div class="hero">
   <h1>Joey Loveland</h1>
 
-  <p>
-    I build clean, modern websites for small businesses
-    that want to attract more customers.
+  <p class="bio">
+    I build modern, high-performing websites for small businesses across the UK.<br>
+    Based in West Sussex, I focus on clean design, fast loading speed, and SEO-friendly structure.<br>
+    I help businesses turn visitors into customers with simple, effective web experiences.
   </p>
 
   <button class="btn" onclick="scrollToContact()">

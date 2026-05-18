@@ -77,12 +77,21 @@ h2 {
   font-size: 1.8rem;
 }
 
-/* GRID */
+/* GRID (WHAT I DO) */
 .grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 15px;
   max-width: 700px;
+  margin: 0 auto;
+}
+
+/* NEW PROJECT GRID (FIX) */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  max-width: 900px;
   margin: 0 auto;
 }
 
@@ -181,6 +190,14 @@ footer {
   padding: 20px;
   color: #8a7d66;
 }
+
+/* MOBILE RESPONSIVE */
+@media (max-width: 768px) {
+  .grid,
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+}
 </style>
 </head>
 
@@ -204,16 +221,14 @@ footer {
   <h2>What I Do</h2>
 
   <div class="grid">
-
-<a class="card" href="#business-websites">Business Websites</a>
-<a class="card" href="#landing-pages">Landing Pages</a>
-<a class="card" href="#portfolio-sites">Portfolio Sites</a>
-<a class="card" href="#website-redesigns">Website Redesigns</a>
-
+    <a class="card" href="#business-websites">Business Websites</a>
+    <a class="card" href="#landing-pages">Landing Pages</a>
+    <a class="card" href="#portfolio-sites">Portfolio Sites</a>
+    <a class="card" href="#website-redesigns">Website Redesigns</a>
   </div>
 </section>
 
-  <section id="business-websites">
+<section id="business-websites">
   <h2>Business Websites</h2>
   <p style="text-align:center; max-width:700px; margin:auto;">
     I create clean, professional business websites designed to clearly present what a company offers and make it easy for visitors to take action.
@@ -252,7 +267,7 @@ footer {
 <section>
   <h2>Example Projects</h2>
 
-  <div class="grid">
+  <div class="projects-grid">
 
     <a href="https://joeyfreelance.github.io/Barber_Web_Demo"
        target="_blank"

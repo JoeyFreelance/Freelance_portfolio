@@ -14,8 +14,8 @@
 }
 
 body {
-  background: #0f172a;
-  color: white;
+  background: radial-gradient(circle at top, #1b1b3a 0%, #0b1020 45%, #070a14 100%);
+  color: #f8fafc;
   line-height: 1.6;
 }
 
@@ -31,7 +31,10 @@ body {
 }
 
 .hero h1 {
-  font-size: 3rem;
+  font-size: 3.2rem;
+  background: linear-gradient(90deg, #7c3aed, #22d3ee, #f97316);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .hero p {
@@ -40,15 +43,23 @@ body {
   color: #cbd5e1;
 }
 
+/* BUTTON */
 .btn {
   margin-top: 20px;
-  padding: 12px 20px;
+  padding: 12px 22px;
   border: none;
-  background: #facc15;
-  color: black;
+  background: linear-gradient(90deg, #7c3aed, #22d3ee);
+  color: white;
   font-weight: bold;
   cursor: pointer;
-  border-radius: 6px;
+  border-radius: 8px;
+  box-shadow: 0 8px 20px rgba(124, 58, 237, 0.35);
+  transition: 0.3s;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 30px rgba(34, 211, 238, 0.35);
 }
 
 /* SECTIONS */
@@ -61,43 +72,54 @@ section {
 h2 {
   text-align: center;
   margin-bottom: 20px;
+  color: #e2e8f0;
 }
 
-/* SERVICES */
+/* GRID */
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 15px;
 }
 
+/* CARDS */
 .card {
-  background: #1e293b;
+  background: linear-gradient(145deg, #141a2e, #0f172a);
   padding: 20px;
-  border-radius: 10px;
+  border-radius: 12px;
+  border: 1px solid rgba(255,255,255,0.06);
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(34, 211, 238, 0.4);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.4);
 }
 
 /* PROJECTS */
 .project {
-  background: #1e293b;
+  background: linear-gradient(145deg, #141a2e, #0f172a);
   padding: 20px;
   border-radius: 12px;
-
   text-decoration: none;
   color: white;
-
+  border: 1px solid rgba(255,255,255,0.06);
   transition: 0.3s;
 }
 
 .project:hover {
   transform: translateY(-6px);
-  background: #2d3b52;
+  border-color: rgba(124, 58, 237, 0.5);
+  box-shadow: 0 12px 30px rgba(124, 58, 237, 0.2);
 }
 
 /* CONTACT */
 .contact {
-  background: #111827;
+  background: linear-gradient(145deg, #0f172a, #0b1020);
   border-radius: 12px;
   padding: 40px;
+  border: 1px solid rgba(255,255,255,0.06);
 }
 
 form {
@@ -111,21 +133,32 @@ form {
 input, textarea {
   padding: 12px;
   border: none;
-  border-radius: 6px;
+  border-radius: 8px;
   font-size: 1rem;
+  background: #111827;
+  color: white;
+  border: 1px solid rgba(255,255,255,0.08);
+}
+
+input:focus, textarea:focus {
+  outline: none;
+  border-color: #22d3ee;
+  box-shadow: 0 0 0 3px rgba(34, 211, 238, 0.15);
 }
 
 button[type="submit"] {
   padding: 12px;
   border: none;
-  background: #facc15;
+  background: linear-gradient(90deg, #f97316, #facc15);
   font-weight: bold;
   cursor: pointer;
-  border-radius: 6px;
+  border-radius: 8px;
+  transition: 0.3s;
 }
 
 button[type="submit"]:hover {
-  background: #eab308;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(249, 115, 22, 0.25);
 }
 
 /* FOOTER */
@@ -139,7 +172,6 @@ footer {
 
 <body>
 
-<!-- HERO -->
 <div class="hero">
   <h1>Joey Loveland</h1>
 
@@ -153,34 +185,18 @@ footer {
   </button>
 </div>
 
-<!-- SERVICES -->
 <section>
   <h2>What I Do</h2>
 
   <div class="grid">
-
-    <div class="card">
-      Business Websites
-    </div>
-
-    <div class="card">
-      Landing Pages
-    </div>
-
-    <div class="card">
-      Portfolio Sites
-    </div>
-
-    <div class="card">
-      Website Redesigns
-    </div>
-
+    <div class="card">Business Websites</div>
+    <div class="card">Landing Pages</div>
+    <div class="card">Portfolio Sites</div>
+    <div class="card">Website Redesigns</div>
   </div>
 </section>
 
-<!-- PROJECTS -->
 <section>
-
   <h2>Example Projects</h2>
 
   <div class="grid">
@@ -188,47 +204,27 @@ footer {
     <a href="https://joeyfreelance.github.io/Barber_Web_Demo"
        target="_blank"
        class="project">
-
       <h3>Barber Shop Website</h3>
-
-      <p>
-        Premium barber website with pricing,
-        reviews and booking form.
-      </p>
-
+      <p>Premium barber website with pricing, reviews and booking form.</p>
     </a>
 
     <a href="https://joeyfreelance.github.io/gym_demo_web/"
        target="_blank"
        class="project">
-
       <h3>Gym Landing Page</h3>
-
-      <p>
-        Modern fitness website with memberships,
-        classes and reviews.
-      </p>
-
+      <p>Modern fitness website with memberships, classes and reviews.</p>
     </a>
 
     <a href="https://joeyfreelance.github.io/cafe_demo_web/"
        target="_blank"
        class="project">
-
       <h3>Café Website</h3>
-
-      <p>
-        Modern café website with menu,
-        gallery and contact section.
-      </p>
-
+      <p>Modern café website with menu, gallery and contact section.</p>
     </a>
 
   </div>
-
 </section>
 
-<!-- CONTACT -->
 <section class="contact" id="contact">
 
   <h2>Contact Me</h2>
@@ -239,30 +235,11 @@ footer {
 
   <form action="https://formspree.io/f/mwvzkjda" method="POST">
 
-    <input
-      type="text"
-      name="name"
-      placeholder="Your Name"
-      required
-    >
+    <input type="text" name="name" placeholder="Your Name" required>
+    <input type="email" name="email" placeholder="Your Email" required>
+    <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
 
-    <input
-      type="email"
-      name="email"
-      placeholder="Your Email"
-      required
-    >
-
-    <textarea
-      name="message"
-      rows="5"
-      placeholder="Your Message"
-      required
-    ></textarea>
-
-    <button type="submit">
-      Send Message
-    </button>
+    <button type="submit">Send Message</button>
 
   </form>
 

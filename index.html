@@ -79,8 +79,18 @@ h2 {
 /* PROJECTS */
 .project {
   background: #1e293b;
-  padding: 15px;
-  border-radius: 10px;
+  padding: 20px;
+  border-radius: 12px;
+
+  text-decoration: none;
+  color: white;
+
+  transition: 0.3s;
+}
+
+.project:hover {
+  transform: translateY(-6px);
+  background: #2d3b52;
 }
 
 /* CONTACT */
@@ -132,59 +142,130 @@ footer {
 <!-- HERO -->
 <div class="hero">
   <h1>Joey Loveland</h1>
-  <p>I build clean, modern websites for small businesses that want to attract more customers.</p>
-  <button class="btn" onclick="scrollToContact()">Get In Touch</button>
+
+  <p>
+    I build clean, modern websites for small businesses
+    that want to attract more customers.
+  </p>
+
+  <button class="btn" onclick="scrollToContact()">
+    Get In Touch
+  </button>
 </div>
 
 <!-- SERVICES -->
 <section>
   <h2>What I Do</h2>
+
   <div class="grid">
-    <div class="card">Business Websites</div>
-    <div class="card">Landing Pages</div>
-    <div class="card">Portfolio Sites</div>
-    <div class="card">Website Redesigns</div>
+
+    <div class="card">
+      Business Websites
+    </div>
+
+    <div class="card">
+      Landing Pages
+    </div>
+
+    <div class="card">
+      Portfolio Sites
+    </div>
+
+    <div class="card">
+      Website Redesigns
+    </div>
+
   </div>
 </section>
 
 <!-- PROJECTS -->
 <section>
+
   <h2>Example Projects</h2>
+
   <div class="grid">
-    <div class="project">
+
+    <a href="https://joeyfreelance.github.io/Barber_Web_Demo"
+       target="_blank"
+       class="project">
+
       <h3>Barber Shop Website</h3>
-      <p>Modern booking-style website for a local barber.</p>
-    </div>
 
-    <div class="project">
+      <p>
+        Premium barber website with pricing,
+        reviews and booking form.
+      </p>
+
+    </a>
+
+    <a href="https://joeyfreelance.github.io/gym_demo_web/"
+       target="_blank"
+       class="project">
+
       <h3>Gym Landing Page</h3>
-      <p>High-conversion landing page design.</p>
-    </div>
 
-    <div class="project">
+      <p>
+        Modern fitness website with memberships,
+        classes and reviews.
+      </p>
+
+    </a>
+
+    <a href="https://joeyfreelance.github.io/cafe_demo_web/"
+       target="_blank"
+       class="project">
+
       <h3>Café Website</h3>
-      <p>Clean menu + contact layout for local café.</p>
-    </div>
+
+      <p>
+        Modern café website with menu,
+        gallery and contact section.
+      </p>
+
+    </a>
+
   </div>
+
 </section>
 
 <!-- CONTACT -->
 <section class="contact" id="contact">
+
   <h2>Contact Me</h2>
+
   <p style="text-align:center; margin-bottom:20px;">
     Fill out the form and I’ll reply within 24 hours.
   </p>
 
   <form action="https://formspree.io/f/mwvzkjda" method="POST">
-    
-    <input type="text" name="name" placeholder="Your Name" required>
 
-    <input type="email" name="email" placeholder="Your Email" required>
+    <input
+      type="text"
+      name="name"
+      placeholder="Your Name"
+      required
+    >
 
-    <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+    <input
+      type="email"
+      name="email"
+      placeholder="Your Email"
+      required
+    >
 
-    <button type="submit">Send Message</button>
+    <textarea
+      name="message"
+      rows="5"
+      placeholder="Your Message"
+      required
+    ></textarea>
+
+    <button type="submit">
+      Send Message
+    </button>
+
   </form>
+
 </section>
 
 <footer>
@@ -193,7 +274,8 @@ footer {
 
 <script>
 function scrollToContact() {
-  document.getElementById("contact").scrollIntoView({ behavior: "smooth" });
+  document.getElementById("contact")
+  .scrollIntoView({ behavior: "smooth" });
 }
 </script>
 

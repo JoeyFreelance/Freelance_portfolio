@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Joey Loveland | Web Developer</title>
+
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background: #0f172a;
+  color: white;
+  line-height: 1.6;
+}
+
+/* HERO */
+.hero {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+}
+
+.hero h1 {
+  font-size: 3rem;
+}
+
+.hero p {
+  max-width: 600px;
+  margin-top: 10px;
+  color: #cbd5e1;
+}
+
+.btn {
+  margin-top: 20px;
+  padding: 12px 20px;
+  border: none;
+  background: #facc15;
+  color: black;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 6px;
+}
+
+/* SECTIONS */
+section {
+  padding: 60px 20px;
+  max-width: 900px;
+  margin: auto;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* SERVICES */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 15px;
+}
+
+.card {
+  background: #1e293b;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+/* PROJECTS */
+.project {
+  background: #1e293b;
+  padding: 15px;
+  border-radius: 10px;
+}
+
+/* CONTACT */
+.contact {
+  background: #111827;
+  border-radius: 12px;
+  padding: 40px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-width: 500px;
+  margin: auto;
+}
+
+input, textarea {
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+button[type="submit"] {
+  padding: 12px;
+  border: none;
+  background: #facc15;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 6px;
+}
+
+button[type="submit"]:hover {
+  background: #eab308;
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 20px;
+  color: #94a3b8;
+}
+</style>
+</head>
+
+<body>
+
+<!-- HERO -->
+<div class="hero">
+  <h1>Joey Loveland</h1>
+  <p>I build clean, modern websites for small businesses that want to attract more customers.</p>
+  <button class="btn" onclick="scrollToContact()">Get In Touch</button>
+</div>
+
+<!-- SERVICES -->
+<section>
+  <h2>What I Do</h2>
+  <div class="grid">
+    <div class="card">Business Websites</div>
+    <div class="card">Landing Pages</div>
+    <div class="card">Portfolio Sites</div>
+    <div class="card">Website Redesigns</div>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section>
+  <h2>Example Projects</h2>
+  <div class="grid">
+    <div class="project">
+      <h3>Barber Shop Website</h3>
+      <p>Modern booking-style website for a local barber.</p>
+    </div>
+
+    <div class="project">
+      <h3>Gym Landing Page</h3>
+      <p>High-conversion landing page design.</p>
+    </div>
+
+    <div class="project">
+      <h3>Café Website</h3>
+      <p>Clean menu + contact layout for local café.</p>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+  <h2>Contact Me</h2>
+  <p style="text-align:center; margin-bottom:20px;">
+    Fill out the form and I’ll reply within 24 hours.
+  </p>
+
+  <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+    
+    <input type="text" name="name" placeholder="Your Name" required>
+
+    <input type="email" name="email" placeholder="Your Email" required>
+
+    <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+
+    <button type="submit">Send Message</button>
+  </form>
+</section>
+
+<footer>
+  © 2026 Joey Loveland | Web Developer
+</footer>
+
+<script>
+function scrollToContact() {
+  document.getElementById("contact").scrollIntoView({ behavior: "smooth" });
+}
+</script>
+
+</body>
+</html>
